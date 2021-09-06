@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+      <div>
+          test:
+      </div>
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -15,9 +18,13 @@ export default {
   components: {
     HelloWorld
   },
-    created() {
+    computed: {
+    },
+    async created() {
       console.log('>>== created');
-      this.boardService.getBoardList('aa','');
+      //const resp = await this.boardService.getBoardList('aa','');
+
+
     }
 
 }
