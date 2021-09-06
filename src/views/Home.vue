@@ -11,8 +11,14 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
+  inject:['boardService'],
   components: {
     HelloWorld
-  }
+  },
+    created() {
+      console.log('>>== created');
+      this.boardService.getBoardList('aa','');
+    }
+
 }
 </script>
